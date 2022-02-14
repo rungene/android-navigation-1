@@ -20,6 +20,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 
 
@@ -42,7 +43,11 @@ class HomeFragment : Fragment() {
         // Set an OnClickListener, using Navigation.createNavigateOnClickListener()
        val button = view.findViewById<Button>(R.id.navigate_destination_button)
        button?.setOnClickListener {
-           findNavController().navigate(R.id.flow_step_one_dest, null)
+           //use the convenience method Navigation.createNavigateOnClickListener(@IdRes destId:
+           // int, bundle: Bundle). This method will build an OnClickListener to navigate to the
+           // given destination with a bundle of arguments to be passed to the destination.
+           Navigation.createNavigateOnClickListener(R.id.flow_step_one_dest,null)
+          // findNavController().navigate(R.id.flow_step_one_dest, null)
         }
 
 
