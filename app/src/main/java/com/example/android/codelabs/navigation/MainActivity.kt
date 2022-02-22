@@ -30,6 +30,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
@@ -102,12 +103,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupActionBar(navController: NavController,
                                appBarConfig : AppBarConfiguration) {
-        // TODO STEP 9.6 - Have NavigationUI handle what your ActionBar displays
+        // Have NavigationUI handle what your ActionBar displays
 //        // This allows NavigationUI to decide what label to show in the action bar
 //        // By using appBarConfig, it will also determine whether to
 //        // show the up arrow or drawer menu icon
-//        setupActionBarWithNavController(navController, appBarConfig)
-        // TODO END STEP 9.6
+        setupActionBarWithNavController(navController, appBarConfig)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
