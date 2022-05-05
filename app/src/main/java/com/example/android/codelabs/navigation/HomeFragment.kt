@@ -23,12 +23,20 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
+import com.example.android.codelabs.navigation.databinding.HomeFragmentBinding
 
 
 /**
  * Fragment used to show how to navigate to another destination
  */
 class HomeFragment : Fragment() {
+    private val _binding : HomeFragmentBinding? = null
+
+    // This property is only valid between onCreateView and
+// onDestroyView
+    private val binding get() = _binding!!
+
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
