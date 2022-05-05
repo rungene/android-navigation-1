@@ -74,15 +74,23 @@ class HomeFragment : Fragment() {
                 popExit = R.anim.slide_out_right
             }
         }
-        view.findViewById<Button>(R.id.navigate_destination_button)?.setOnClickListener {
+
+        binding.navigateDestinationButton.setOnClickListener {
             findNavController().navigate(R.id.flow_step_one_dest, null, options)
         }
 
+  /*      view.findViewById<Button>(R.id.navigate_destination_button)?.setOnClickListener {
+            findNavController().navigate(R.id.flow_step_one_dest, null, options)
+        }
+*/
 
         // Update the OnClickListener to navigate using an action
-        view.findViewById<Button>(R.id.navigate_action_button)?.setOnClickListener(
+        binding.navigateActionButton.setOnClickListener {
+            Navigation.createNavigateOnClickListener(R.id.next_action, null)
+        }
+      /*  view.findViewById<Button>(R.id.navigate_action_button)?.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.next_action, null)
-        )
+        )*/
 
     }
 
