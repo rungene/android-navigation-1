@@ -45,8 +45,9 @@ class HomeFragment : Fragment() {
         setHasOptionsMenu(true)
         _binding = HomeFragmentBinding.inflate(inflater,container,false)
         val view = binding.root
+        return view
 
-        return inflater.inflate(R.layout.home_fragment, container, false)
+        //return inflater.inflate(R.layout.home_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
