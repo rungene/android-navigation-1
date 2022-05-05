@@ -30,7 +30,7 @@ import com.example.android.codelabs.navigation.databinding.HomeFragmentBinding
  * Fragment used to show how to navigate to another destination
  */
 class HomeFragment : Fragment() {
-    private val _binding : HomeFragmentBinding? = null
+    private var _binding : HomeFragmentBinding? = null
 
     // This property is only valid between onCreateView and
 // onDestroyView
@@ -43,6 +43,8 @@ class HomeFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         setHasOptionsMenu(true)
+        _binding = HomeFragmentBinding.inflate(inflater,container,false)
+
         return inflater.inflate(R.layout.home_fragment, container, false)
     }
 
