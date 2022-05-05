@@ -44,6 +44,7 @@ class HomeFragment : Fragment() {
     ): View? {
         setHasOptionsMenu(true)
         _binding = HomeFragmentBinding.inflate(inflater,container,false)
+        val view = binding.root
 
         return inflater.inflate(R.layout.home_fragment, container, false)
     }
