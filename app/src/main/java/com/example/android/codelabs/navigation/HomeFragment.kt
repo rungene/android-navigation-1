@@ -85,9 +85,9 @@ class HomeFragment : Fragment() {
 */
 
         // Update the OnClickListener to navigate using an action
-        binding.navigateActionButton.setOnClickListener {
+        binding.navigateActionButton.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.next_action, null)
-        }
+            )
       /*  view.findViewById<Button>(R.id.navigate_action_button)?.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.next_action, null)
         )*/
